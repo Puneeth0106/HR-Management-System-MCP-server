@@ -51,7 +51,6 @@ class MeetingBase(BaseModel):
     emp_id: str = Field(..., description="Employee identifier")
     meeting_dt: datetime = Field(..., description="Scheduled date and time of the meeting")
     topic: str = Field(..., description="Topic or subject of the meeting")
-
     model_config = ConfigDict(from_attributes=True)
 
 
