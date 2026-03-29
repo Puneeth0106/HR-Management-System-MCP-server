@@ -29,6 +29,7 @@ class EmployeeManager:
             raise ValueError(f"Manager ID '{manager_id}' does not exist.")
         self.employees[emp.emp_id] = emp.model_dump()
         self.manager_map[emp.emp_id] = manager_id
+        
 
     def get_manager(self, emp_id: str) -> str:
         """
