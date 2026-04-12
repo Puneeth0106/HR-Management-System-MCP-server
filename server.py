@@ -4,7 +4,8 @@ from hrms import *
 from utils import seed_services
 from emails import EmailSender
 from dotenv import load_dotenv
-from typing import List
+from typing import List, Dict
+from datetime import datetime
 
 load_dotenv()
 
@@ -62,7 +63,7 @@ def get_employee_details(name: str) -> Dict[str, str]:
 
 @mcp.tool()
 def send_email(to_emails: List[str], subject: str, body: str, html: bool = False) -> None:
-    emailer.send_email(subject, body, to_emails, from_email=emailer.username, html=html)
+    email_sender.send_email(subject, body, to_emails, from_email=email_sender.username, html=html)
     return "Email sent successfully."
 
 
