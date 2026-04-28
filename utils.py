@@ -20,18 +20,18 @@ def seed_services(employee_manager, leave_manager, meeting_manager, ticket_manag
 
     employees_data = [
         # Leadership
-        {"emp_id": "E001", "name": "Sarah Johnson", "manager_id": None, "email": "sarah.johnson@atliq.com"},
-        {"emp_id": "E002", "name": "Michael Chen", "manager_id": None, "email": "michael.chen@atliq.com"},
+        {"emp_id": "E001", "name": "Sarah Johnson", "manager_id": None, "email": "sarah.johnson@puneeth.com"},
+        {"emp_id": "E002", "name": "Michael Chen", "manager_id": None, "email": "michael.chen@puneeth.com"},
 
         # Engineering team under Sarah
-        {"emp_id": "E003", "name": "David Wilson", "manager_id": "E001", "email": "david.wilson@atliq.com"},
-        {"emp_id": "E004", "name": "Tony Sharma", "manager_id": "E003", "email": "tony.sharma@atliq.com"},
-        {"emp_id": "E005", "name": "James Rodriguez", "manager_id": "E003", "email": "james.rodriguez@atliq.com"},
+        {"emp_id": "E003", "name": "David Wilson", "manager_id": "E001", "email": "david.wilson@puneeth.com"},
+        {"emp_id": "E004", "name": "Tony Sharma", "manager_id": "E003", "email": "tony.sharma@puneeth.com"},
+        {"emp_id": "E005", "name": "James Rodriguez", "manager_id": "E003", "email": "james.rodriguez@puneeth.com"},
 
         # Product team under Michael
-        {"emp_id": "E006", "name": "Emily Kim", "manager_id": "E002", "email": "emily.kim@atliq.com"},
-        {"emp_id": "E007", "name": "Carlos Mendez", "manager_id": "E006", "email": "carlos.mendez@atliq.com"},
-        {"emp_id": "E008", "name": "Lisa Wong", "manager_id": "E006", "email": "lisa.wong@atliq.com"},
+        {"emp_id": "E006", "name": "Emily Kim", "manager_id": "E002", "email": "emily.kim@puneeth.com"},
+        {"emp_id": "E007", "name": "Carlos Mendez", "manager_id": "E006", "email": "carlos.mendez@puneeth.com"},
+        {"emp_id": "E008", "name": "Lisa Wong", "manager_id": "E006", "email": "lisa.wong@puneeth.com"},
     ]
 
     # Populate employee manager

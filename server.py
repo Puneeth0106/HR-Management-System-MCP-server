@@ -4,7 +4,7 @@ from hrms import *
 from utils import seed_services
 from emails import EmailSender
 from dotenv import load_dotenv
-from typing import List, Dict
+from typing import List, Dict, Optional
 from datetime import datetime
 
 load_dotenv()
@@ -46,7 +46,7 @@ def add_employee(emp_name:str, manager_id:str, email:str) -> str:
     return f"Employee {emp_name} added successfully."
 
 @mcp.tool()
-def get_employee_details(name: str) -> Dict[str, str]:
+def get_employee_details(name: str) -> Dict[str, Optional[str]]:
     """
     Get employee details by name.
     :param name: Name of the employee
@@ -185,8 +185,9 @@ def onboard_new_employee(employee_name: str, manager_name: str):
     - Name: {employee_name}
     - Manager Name: {manager_name}
     Steps to follow:
-    - Add the employee to the HRMS system.
-    - Send a welcome email to the employee with their login credentials. (Format: employee_name@atliq.com)
+    - First, look up the manager's employee ID by calling get_employee_details with the manager's name. Use the returned emp_id as the manager_id in the next step.
+    - Add the employee to the HRMS system using the manager's employee ID (not the manager's name).
+    - Send a welcome email to the employee with their login credentials. (Format: employee_name@puneeth.com)
     - Notify the manager about the new employee's onboarding.
     - Raise tickets for a new laptop, id card, and other necessary equipment.
     - Schedule an introductory meeting between the employee and the manager.
